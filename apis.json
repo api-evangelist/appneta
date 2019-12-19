@@ -1,0 +1,67 @@
+{
+    "name": "AppNeta",
+    "description": "AppNeta's award-winning suite of network monitoring tools allow unparalleled SaaS-based application end-user performance monitoring for 100% delivery confidence. Request a free demo!",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/11161-appneta.jpg",
+    "tags": [
+        "api service provider",
+        "applications",
+        "have api",
+        "monitoring",
+        "networks"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/appneta\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "AppNeta",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/11161-appneta.jpg",
+            "humanURL": "http:\/\/www.appneta.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/appneta-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Blog",
+            "url": "http:\/\/www.appneta.com\/blog\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/appneta"
+        },
+        {
+            "type": "Email",
+            "url": "unsubscribe@appneta.com"
+        },
+        {
+            "type": "Email",
+            "url": "info@appneta.com"
+        },
+        {
+            "type": "Email",
+            "url": "careers@appneta.com"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/www.appneta.com\/pricing\/"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/Appneta"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/www.appneta.com\/"
+        }
+    ]
+}
