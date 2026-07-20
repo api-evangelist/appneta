@@ -1,0 +1,25 @@
+generated: '2026-07-17'
+method: searched
+source: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api-access-tokens.html
+docs: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api-access-tokens.html
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+- name: ApiAccessToken
+  type: apiKey
+  in: header
+  header_name: Authorization
+  value_format: Token <api_access_token>
+  description: >-
+    AppNeta API requests are authenticated with an API access token passed in the
+    Authorization request header with the literal scheme word "Token", e.g.
+    `Authorization: Token <token>`. Token values are case sensitive. Tokens are
+    created and managed in AppNeta Performance Manager (API Access Tokens admin);
+    they let scripts and applications call the API without embedding a username and
+    password.
+  example_request: >-
+    curl -X GET -H "Authorization: Token <token>" -H "Accept: application/json"
+    "https://<node>.pm.appneta.com/api/v3/path"
+  sources: [docs]
