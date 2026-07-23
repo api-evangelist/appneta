@@ -1,0 +1,20 @@
+generated: '2026-07-17'
+method: searched
+source: https://github.com/appneta
+note: >-
+  AppNeta publishes no first-party API client SDK on a public package registry; its
+  REST API is accessed with plain HTTP + an API access token, and Broadcom TechDocs
+  ships downloadable sample code rather than a packaged client library. The one
+  first-party open-source project AppNeta maintains is the widely used tcpreplay
+  pcap editing/replay suite (network testing tooling, not an API SDK).
+packages:
+- language: c
+  registry: github
+  name: tcpreplay
+  url: https://github.com/appneta/tcpreplay
+  install: https://tcpreplay.appneta.com/wiki/installation.html
+  official: true
+  description: >-
+    Suite of *NIX/Windows utilities (tcpreplay, tcprewrite, tcpprep, tcpliveplay,
+    tcpbridge) for editing and replaying previously captured network traffic;
+    maintained by AppNeta.
