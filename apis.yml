@@ -39,7 +39,7 @@ x-note: >-
   lives on Broadcom TechDocs. The AppNeta REST API is served from each customer's own APM
   appliance host (pattern <appliance>.pm.appneta.com/api/v3|v4), so there is no single
   public production baseURL and no publicly harvestable OpenAPI to capture.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
