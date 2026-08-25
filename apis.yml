@@ -13,19 +13,15 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/appneta.png
 name: AppNeta
-description: >-
-  AppNeta is a network performance monitoring (NPM) platform for the distributed,
-  cloud-connected enterprise, now delivered as a Broadcom product under its
-  IT Operations Management / Network Management portfolio. AppNeta Performance
-  Manager continuously measures network paths, delivery quality, usage, and
-  end-user application experience across SaaS, cloud, and internet paths using a
-  combination of active (synthetic) and passive monitoring from distributed
-  monitoring points. It exposes a RESTful API (v3 for AppNeta Classic and v4 for
-  AppNeta with Intelligent Alarms) for programmatic access to monitoring policies,
-  web paths, web applications, alarm connectors, and event/observer integrations,
-  authenticated with API access tokens. As of February 2026 the API interface and
-  documentation were upgraded from Swagger to OpenAPI 3.0. AppNeta was originally an
-  independent, Battery Ventures-backed company before joining Broadcom.
+description: AppNeta is a network performance monitoring (NPM) platform for the distributed, cloud-connected enterprise,
+  now delivered as a Broadcom product under its IT Operations Management / Network Management portfolio. AppNeta
+  Performance Manager continuously measures network paths, delivery quality, usage, and end-user application experience
+  across SaaS, cloud, and internet paths using a combination of active (synthetic) and passive monitoring from distributed
+  monitoring points. It exposes a RESTful API (v3 for AppNeta Classic and v4 for AppNeta with Intelligent Alarms)
+  for programmatic access to monitoring policies, web paths, web applications, alarm connectors, and event/observer
+  integrations, authenticated with API access tokens. As of February 2026 the API interface and documentation were
+  upgraded from Swagger to OpenAPI 3.0. AppNeta was originally an independent, Battery Ventures-backed company before
+  joining Broadcom.
 url: https://raw.githubusercontent.com/api-evangelist/appneta/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -33,15 +29,13 @@ x-backed-by:
 - battery-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
-x-note: >-
-  AppNeta is now a Broadcom product; the standalone appneta.com brand pages 301-redirect
-  to broadcom.com/products/software/network-management/appneta and developer documentation
-  lives on Broadcom TechDocs. The AppNeta REST API is served from each customer's own APM
-  appliance host (pattern <appliance>.pm.appneta.com/api/v3|v4), so there is no single
-  public production baseURL and no publicly harvestable OpenAPI to capture.
+x-note: AppNeta is now a Broadcom product; the standalone appneta.com brand pages 301-redirect to broadcom.com/products/software/network-management/appneta
+  and developer documentation lives on Broadcom TechDocs. The AppNeta REST API is served from each customer's own
+  APM appliance host (pattern <appliance>.pm.appneta.com/api/v3|v4), so there is no single public production baseURL
+  and no publicly harvestable OpenAPI to capture.
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-08-21'
 tags:
 - Company
 - Network Monitoring
@@ -53,12 +47,10 @@ tags:
 - Broadcom
 apis:
 - name: AppNeta Performance Manager API
-  description: >-
-    RESTful API for AppNeta Performance Manager, covering monitoring policies and
-    policy groups, web paths, web applications (locations, targets, user flows),
-    monitoring points, alarm connectors (v4), and observer/event integrations (v3).
-    Authenticated with API access tokens. Documentation upgraded from Swagger to
-    OpenAPI 3.0 (Feb 2026). Served from each customer's APM appliance host.
+  description: RESTful API for AppNeta Performance Manager, covering monitoring policies and policy groups, web
+    paths, web applications (locations, targets, user flows), monitoring points, alarm connectors (v4), and observer/event
+    integrations (v3). Authenticated with API access tokens. Documentation upgraded from Swagger to OpenAPI 3.0
+    (Feb 2026). Served from each customer's APM appliance host.
   humanURL: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html
   properties:
   - type: APIReference
@@ -67,9 +59,26 @@ apis:
     url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html
   - type: Authentication
     url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/create-an-api-access-token.html
+- name: AppNeta REST API
+  description: Token-authenticated REST API for the AppNeta SaaS platform. v4 (Intelligent Alarms) and v3 (Classic)
+    expose monitoring data, monitoring policies, Monitoring Point provisioning, web-application and network-path
+    results. Base host is the customer's application cluster, e.g. https://<application_cluster>.pm.appneta.com/api/v4.
+  humanURL: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html
+  baseURL: https://{application_cluster}.pm.appneta.com/api/v4
+  properties:
+  - type: Documentation
+    url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html
+  - type: APIReference
+    url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html
+  - type: Authentication
+    url: authentication/appneta-broadcom-software-authentication.yml
 common:
-- type: Website
-  url: https://www.broadcom.com/products/software/network-management/appneta
+- type: ParentCompany
+  url: https://apis.io/providers/broadcom/
+  name: Broadcom
+  x-relationship: acquisition
+  x-generated-by: broadcom-family:2026-08-21
+  x-acquired: 2021
 - type: DeveloperPortal
   url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA.html
 - type: Documentation
@@ -86,6 +95,18 @@ common:
   url: packages/appneta-packages.yml
 - type: DomainSecurity
   url: security/appneta-domain-security.yml
+- type: Website
+  url: https://www.appneta.com/
+- type: DeveloperPortal
+  url: https://techdocs.broadcom.com/appneta
+- type: Blog
+  url: https://www.appneta.com/blog/
+- type: Subsidiary
+  url: https://apis.io/providers/tracelytics/
+  name: Tracelytics
+  x-relationship: acquisition
+  x-generated-by: broadcom-family:2026-08-21
+  x-acquired: 2012
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -96,3 +117,6 @@ x-enrichment:
   status: backfilled
   pass: local-v1
   note: backfilled from .gitignore signal + verified work evidence
+x-parent: broadcom
+x-relationship: acquisition
+x-acquired: 2021
