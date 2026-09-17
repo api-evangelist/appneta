@@ -48,7 +48,7 @@ x-note: AppNeta is now a Broadcom product; the standalone appneta.com brand page
   and no publicly harvestable OpenAPI to capture.
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-08-21'
+modified: '2026-09-16'
 tags:
 - Company
 - Network Monitoring
@@ -65,13 +65,14 @@ apis:
     integrations (v3). Authenticated with API access tokens. Documentation upgraded from Swagger to OpenAPI 3.0
     (Feb 2026). Served from each customer's APM appliance host.
   humanURL: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html
+  baseURL: https://{application_cluster}.pm.appneta.com/api/v3
   properties:
   - type: APIReference
     url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html
   - type: Documentation
     url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html
   - type: Authentication
-    url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/create-an-api-access-token.html
+    url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-access-tokens.html
 - name: AppNeta REST API
   description: Token-authenticated REST API for the AppNeta SaaS platform. v4 (Intelligent Alarms) and v3 (Classic)
     expose monitoring data, monitoring policies, Monitoring Point provisioning, web-application and network-path
@@ -84,7 +85,7 @@ apis:
   - type: APIReference
     url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html
   - type: Authentication
-    url: authentication/appneta-broadcom-software-authentication.yml
+    url: authentication/appneta-authentication.yml
 common:
 - type: ParentCompany
   url: https://apis.io/providers/broadcom/
@@ -112,24 +113,50 @@ common:
   url: https://www.appneta.com/
 - type: DeveloperPortal
   url: https://techdocs.broadcom.com/appneta
-- type: Blog
-  url: https://www.appneta.com/blog/
 - type: Subsidiary
   url: https://apis.io/providers/tracelytics/
   name: Tracelytics
   x-relationship: acquisition
   x-generated-by: broadcom-family:2026-08-21
   x-acquired: 2012
+- type: GettingStarted
+  url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/getting-started.html
+- type: TermsOfService
+  url: https://www.broadcom.com/company/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.broadcom.com/company/legal/privacy
+- type: StatusPage
+  url: https://status.broadcom.com/services/appneta
+- type: Lifecycle
+  url: lifecycle/appneta-lifecycle.yml
+- type: ChangeLog
+  url: changelog/appneta-changelog.yml
+- type: ChangeLog
+  url: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3.html#title-appneta-api_api-changes
+- type: ErrorCatalog
+  url: errors/appneta-problem-types.yml
+- type: RateLimits
+  url: rate-limits/appneta-rate-limits.yml
+- type: Conventions
+  url: conventions/appneta-conventions.yml
+- type: Components
+  url: components/appneta-components.yml
+- type: Webhooks
+  url: asyncapi/appneta-event-integration-webhooks.yml
+- type: Plans
+  url: plans/appneta-plans-pricing.yml
+- type: LLMsTxt
+  url: llms/appneta-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
-  pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  date: '2026-09-16'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v3
 x-parent: broadcom
 x-relationship: acquisition
 x-acquired: 2021
