@@ -1,0 +1,29 @@
+generated: '2026-09-16'
+method: searched
+source: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3.html#title-appneta-api_api-changes
+docs:
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html#title-appneta-api_api-changes
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3.html#title-appneta-api_api-changes
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/monitoring-point-admin-api.html#monitoring-point-admin-api_api-changes
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-on-prem.html#appneta-api-on-prem_api-changes
+description: >-
+  AppNeta publishes dated "API Changes" sections on each API's TechDocs page. Entries are
+  dated by week. Versioning is by path major version (/api/v3 for AppNeta Classic,
+  /api/v4 for AppNeta with Intelligent Alarms) plus a /beta environment where new
+  endpoints land before promotion to production.
+versioning:
+  scheme: path-major (v3, v4) plus beta environment
+  current: v4
+entries:
+- {date: '2026-08-26', api: Monitoring Point Admin API, breaking: true, highlights: 'PUT /api/v1/appliance/password/ now requires a current_password field; omitting it returns 400.'}
+- {date: '2026-03-02', api: v4, breaking: false, highlights: 'API v4 available to all customers as part of AppNeta with Intelligent Alarms.'}
+- {date: '2026-02-16', api: v3/v4, breaking: false, highlights: 'API interface and documentation upgraded from Swagger to OpenAPI 3.0.'}
+- {date: '2025-04-28', api: v3, breaking: false, highlights: 'New /v3/monitoringPolicy and /v3/monitoringPolicyGroup endpoints, including POST .../preview impact previews.'}
+- {date: '2025-01-06', api: v3, breaking: false, highlights: '/v3/path model adds monitoringPolicyId and monitoringPolicyName.'}
+- {date: '2024-09-03', api: v3, breaking: false, highlights: 'relatedNetworkPathId added to GET /v3/webPath/data.'}
+- {date: '2024-07-22', api: v3, breaking: false, highlights: 'IncludeErrorDetails flag on GET /v3/webApplication/{id}/monitor/{webMonitorId}/data.'}
+- {date: '2024-06-24', api: v3, breaking: false, highlights: 'New web metric data on GET /v3/webPath/data.'}
+- {date: '2024-04-01', api: v3, breaking: false, highlights: 'New POST /v3/appliance/cmpEnv/{orgId} for container-based Monitoring Point environment variables.'}
+- {date: '2023-10-16', api: v3, breaking: false, highlights: 'Smart saved lists via POST /v3/savedList and PUT /v3/savedList/{id}.'}
+- {date: '2023-03-20', api: v3, breaking: false, highlights: 'Monitoring Point deletion policy CRUD endpoints (/v3/monitoringPointDeletionPolicy).'}
+- {date: '2022-11-14', api: v3, breaking: false, highlights: 'webApplication location/target/userFlow endpoints promoted from beta to production.'}

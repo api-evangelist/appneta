@@ -1,0 +1,26 @@
+generated: '2026-09-16'
+method: searched
+source: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html
+docs:
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3.html
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/monitoring-point-admin-api.html
+limit_count: 10
+responseCodes:
+  throttled: 429
+headers: []
+headers_note: >-
+  The docs do not name any rate-limit response headers (X-RateLimit-*, RateLimit-*,
+  Retry-After); only the 429 status is documented. Not observable anonymously - every
+  API path on an application cluster answers 401 without a token.
+limits:
+- {api: AppNeta REST API v3/v4, scope: not stated, limit: 50, window: 10 seconds, note: 'Currently the rate limit is 50 requests every 10 seconds.'}
+- {api: AppNeta REST API v3/v4, scope: per-request data size, limit: 20 path-days, note: 'Bulk data endpoints (e.g. GET /v4/webPath/data) return at most 20 path-days per request (20 days for 1 path ... 1 hour for 480 paths).'}
+- {api: Monitoring Point Admin API, scope: per-endpoint, endpoint: 'PUT /service/<service_name>/', limit: '12/min and 1/sec'}
+- {api: Monitoring Point Admin API, scope: per-endpoint, endpoint: 'PUT /service/<service_name>/settings/', limit: '12/min and 1/sec'}
+- {api: Monitoring Point Admin API, scope: per-endpoint, endpoint: 'POST /access_control/ldap/', limit: '12/min and 1/sec'}
+- {api: Monitoring Point Admin API, scope: per-endpoint, endpoint: 'DELETE /access_control/ldap/', limit: '12/min and 1/sec'}
+- {api: Monitoring Point Admin API, scope: per-endpoint, endpoint: 'PUT /ntp/', limit: '12/min and 2/sec'}
+- {api: Monitoring Point Admin API, scope: per-endpoint, endpoint: 'DELETE /ntp/', limit: '12/min and 2/sec'}
+- {api: Monitoring Point Admin API, scope: per-endpoint, endpoint: 'POST /web/ssl/', limit: '12/min and 2/sec'}
+- {api: Monitoring Point Admin API, scope: per-endpoint, endpoint: 'DELETE /web/ssl', limit: '12/min and 2/sec'}

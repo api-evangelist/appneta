@@ -1,4 +1,4 @@
-generated: '2026-07-17'
+generated: '2026-09-16'
 method: searched
 source: https://github.com/appneta
 note: >-
@@ -14,6 +14,9 @@ packages:
   url: https://github.com/appneta/tcpreplay
   install: https://tcpreplay.appneta.com/wiki/installation.html
   official: true
+  version: v4.6.1
+  published: '2026-08-15'
+  version_source: https://api.github.com/repos/appneta/tcpreplay/releases/latest
   description: >-
     Suite of *NIX/Windows utilities (tcpreplay, tcprewrite, tcpprep, tcpliveplay,
     tcpbridge) for editing and replaying previously captured network traffic;

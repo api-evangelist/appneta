@@ -1,0 +1,24 @@
+generated: '2026-09-16'
+method: searched
+source: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/embeddable-charts.html
+description: >-
+  AppNeta offers two embeddable UI surfaces for placing AppNeta content inside a
+  customer's own web pages. Both are configured in the AppNeta UI rather than through
+  a client library; no loader package is published.
+docs:
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/embeddable-charts.html
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/integration-embeddable-session.html
+libraries: []
+families:
+- name: Embeddable Charts
+  kind: embedded chart
+  docs: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/embeddable-charts.html
+  components:
+  - {name: Network path performance charts}
+  - {name: DNS chart}
+  enablement: Organization Admin enables Settings > Embeddable Charts Configuration; embeddable content is then retrieved per chart and can be customized.
+- name: Embeddable Session Login
+  kind: embedded application session
+  docs: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/integration-embeddable-session.html
+  enablement: Organization Admin grants the Embeddable Session Login add-on privilege to a user, who receives the embeddable URL by email.
+  security_note: The docs warn that embedding an application within another can expose cross-site scripting (XSS) risks.

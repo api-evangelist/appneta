@@ -1,0 +1,59 @@
+generated: '2026-09-16'
+method: probed
+source: anonymous GET /.well-known/* on every host the record knows (curl -L, browser User-Agent)
+note: >-
+  No host serves any /.well-known discovery document. appneta.com and www.appneta.com
+  301-redirect every path (including /.well-known/*) to the Broadcom AppNeta product page,
+  which answers 200 with HTML - recorded as misses, not documents. techdocs.broadcom.com
+  redirects every /.well-known/* path to its home page (HTML shell). broadcom.com /
+  www.broadcom.com return real 404s. pm.appneta.com (apex of the templated
+  {application_cluster}.pm.appneta.com API base) does not resolve / connect. No WellKnown or
+  SecurityTxt pointer is emitted because nothing was actually served.
+hosts:
+- host: appneta.com
+  documents:
+  - {path: /.well-known/security.txt, status: 200, file: null, note: 301 to broadcom.com AppNeta product page, HTML}
+  - {path: /.well-known/openid-configuration, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+  - {path: /.well-known/oauth-authorization-server, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+  - {path: /.well-known/oauth-protected-resource, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+  - {path: /.well-known/api-catalog, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+  - {path: /.well-known/ai-plugin.json, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+- host: www.appneta.com
+  documents:
+  - {path: /.well-known/security.txt, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+  - {path: /.well-known/openid-configuration, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+  - {path: /.well-known/oauth-authorization-server, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+  - {path: /.well-known/oauth-protected-resource, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+  - {path: /.well-known/api-catalog, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+  - {path: /.well-known/ai-plugin.json, status: 200, file: null, note: 301 to broadcom.com product page, HTML}
+- host: www.broadcom.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/api-catalog, status: 404, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+- host: techdocs.broadcom.com
+  documents:
+  - {path: /.well-known/security.txt, status: 200, file: null, note: redirects to techdocs home page, HTML shell}
+  - {path: /.well-known/openid-configuration, status: 200, file: null, note: redirects to techdocs home page, HTML shell}
+  - {path: /.well-known/oauth-authorization-server, status: 200, file: null, note: redirects to techdocs home page, HTML shell}
+  - {path: /.well-known/oauth-protected-resource, status: 200, file: null, note: redirects to techdocs home page, HTML shell}
+  - {path: /.well-known/api-catalog, status: 200, file: null, note: redirects to techdocs home page, HTML shell}
+  - {path: /.well-known/ai-plugin.json, status: 200, file: null, note: redirects to techdocs home page, HTML shell}
+- host: pm.appneta.com
+  documents:
+  - {path: /.well-known/security.txt, status: 0, file: null, note: no connection}
+  - {path: /.well-known/api-catalog, status: 0, file: null, note: no connection}
+- host: app-01.pm.appneta.com
+  note: a live application-cluster host (answers 401 on /api/v4/openapi.json)
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+agent_card:
+  probed:
+  - {url: 'https://www.broadcom.com/.well-known/agent-card.json', status: 404}
+  - {url: 'https://www.broadcom.com/.well-known/agent.json', status: 404}
+  - {url: 'https://www.appneta.com/.well-known/agent-card.json', status: 200, note: redirect to HTML product page - not a card}
+  - {url: 'https://techdocs.broadcom.com/.well-known/agent-card.json', status: 200, note: HTML shell - not a card}
+  result: none

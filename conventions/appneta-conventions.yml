@@ -1,0 +1,60 @@
+generated: '2026-09-16'
+method: searched
+source: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html
+docs:
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3.html
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3/event-integration.html
+auth:
+  style: 'Authorization: Token <api_access_token>'
+  ref: authentication/appneta-authentication.yml
+base_url:
+  pattern: 'https://<application_cluster>.pm.appneta.com/api/v4'
+  note: Host is the customer's AppNeta application cluster; there is no single shared host.
+format:
+  media_type: application/json
+  accept_header: 'Accept: application/json'
+ids:
+  note: IDs (organization, monitoring policy, Monitoring Point) are obtained from GET /v4/organization, GET /v4/monitoringPolicy and GET /v4/monitoringPoint.
+time:
+  format: Unix time (seconds since 1970-01-01T00:00:00Z) for endpoints that take a time stamp
+bulk_data:
+  limit: 20 path-days per request
+  example_endpoint: GET /v4/webPath/data
+pagination:
+  documented: false
+versioning:
+  ref: lifecycle/appneta-lifecycle.yml
+errors:
+  ref: errors/appneta-problem-types.yml
+rate_limits:
+  ref: rate-limits/appneta-rate-limits.yml
+  signal: HTTP 429 (no headers documented)
+request_id:
+  documented: false
+dry_run:
+  documented: true
+  operations:
+  - POST /v3/monitoringPolicy/preview
+  - POST /v3/monitoringPolicyGroup/preview
+  note: Preview endpoints return the Monitoring Points and paths a policy change would create, modify or delete without applying it.
+  source: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3.html#title-appneta-api_api-changes
+idempotency:
+  coverage: none
+  mechanism: null
+  note: >-
+    No idempotency key or replay protection is documented. POST /v3/observer overwrites
+    the caller's existing observer configuration (a full replace rather than an append),
+    and a duplicate observer URL for the same user is rejected ("Please make sure each
+    observer URL is unique").
+reversibility:
+  grade: none
+  note: >-
+    Writes are standard CRUD (POST/PUT/PATCH/DELETE on monitoring policies, web
+    applications, saved lists, Monitoring Point deletion policies). The docs describe no
+    reversal operation (undo, restore, soft delete) and no recovery window; deleting a
+    monitoring policy group also deletes every monitoring policy it contains. Reversal is
+    only by re-creating the resource.
+  surfaces:
+  - {write: 'DELETE /v3/monitoringPolicyGroup/{id}', reversal: null, window: null, note: 'Deletes the group and all monitoring policies it includes.'}
+  - {write: 'POST /v3/observer', reversal: 'POST /v3/observer with enabled=false or the previous configuration', window: null, note: 'Disabling pauses events without removing the configuration.'}

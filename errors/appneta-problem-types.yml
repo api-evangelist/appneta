@@ -1,0 +1,27 @@
+generated: '2026-09-16'
+method: searched
+format: http-status
+source: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html
+docs:
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html
+- https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3.html
+note: >-
+  AppNeta documents its error responses as HTTP status codes with a fixed message string
+  (shared across API v3 and v4). No public OpenAPI is available to derive the response
+  body schema; the docs do not describe an RFC 9457 application/problem+json envelope.
+problems:
+- {status: 400, title: Bad Request, meaning: The parameters sent with the request were incorrect.}
+- {status: 401, title: Full authentication is required to access this resource, meaning: No credentials were passed with the request.}
+- {status: 401, title: Bad credentials, meaning: Credentials were passed but were invalid., remediation: Try using different credentials.}
+- {status: 401, title: Failed to decode basic authentication token, meaning: An encoded token could not be decoded., remediation: Try recreating the token.}
+- {status: 403, title: Access is denied, meaning: The server understood the request but will not fulfill it; likely missing permission for the resource (for example the wrong organization).}
+- {status: 404, title: Not found, meaning: The specified API endpoint was invalid., remediation: Check the specified URL string.}
+- {status: 406, title: Not Acceptable, meaning: Incorrect information in the request header, for example., remediation: Review the request.}
+- {status: 429, title: Too many requests, meaning: Too many requests in a given amount of time (rate limiting)., remediation: See rate-limits/appneta-rate-limits.yml.}
+- {status: 500, title: Internal server error, meaning: An issue on the system you are targeting., remediation: Try the request again later.}
+other:
+- api: Monitoring Point Admin API
+  status: 400
+  meaning: PUT /api/v1/appliance/password/ without the required current_password field (change dated August 26, 2026).
+  source: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/monitoring-point-admin-api.html

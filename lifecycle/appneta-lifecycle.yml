@@ -1,0 +1,24 @@
+generated: '2026-09-16'
+method: searched
+source: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html
+versioning:
+  scheme: path-major
+  versions:
+  - {version: v3, experience: AppNeta Classic, base: 'https://{application_cluster}.pm.appneta.com/api/v3', docs: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3.html}
+  - {version: v4, experience: AppNeta with Intelligent Alarms, base: 'https://{application_cluster}.pm.appneta.com/api/v4', docs: https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html, ga: '2026-03-02'}
+  - {version: beta, note: 'New endpoints are released to a /beta environment first and later moved to production (e.g. week of November 14, 2022).'}
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: >-
+    No published deprecation or sunset policy was found. The Classic-only Observer
+    (/v3/observer) event integration is documented as not supported in the Intelligent
+    Alarms experience, where alarm connectors are recommended instead.
+changelog: changelog/appneta-changelog.yml
+status_page:
+  url: https://status.broadcom.com/services/appneta
+  note: status.appneta.com 301-redirects here; the path answers 200 without a trailing slash.
+sla:
+  url: null
+  note: No public API SLA found in TechDocs.
+deprecated_operations: []
