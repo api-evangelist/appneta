@@ -48,7 +48,7 @@ x-note: AppNeta is now a Broadcom product; the standalone appneta.com brand page
   and no publicly harvestable OpenAPI to capture.
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-09-16'
+modified: '2026-10-06'
 tags:
 - Company
 - Network Monitoring
@@ -87,6 +87,8 @@ apis:
   - type: Authentication
     url: authentication/appneta-authentication.yml
 common:
+- url: https://www.broadcom.com/company/news
+  type: Blog
 - type: ParentCompany
   url: https://apis.io/providers/broadcom/
   name: Broadcom
