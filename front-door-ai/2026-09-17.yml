@@ -7,14 +7,17 @@ front_door_ai:
   probed_at: '2026-09-17'
   host: www.appneta.com
   final_host: www.broadcom.com
-  ownership: inherited
+  ownership: own
   owner: appneta
   shares_host_with: null
-  inherited_from: appneta.com
+  inherited_from: null
+  alias_of: appneta.com
   verdict: silent
-  score: null
+  score: 0
+  band: 1
+  band_label: silent
   host_score: 0
-  density: null
+  density: 0.0
   words: 44
   tiers:
     agentic: 0
