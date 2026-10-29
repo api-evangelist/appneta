@@ -64,6 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AppNeta is a company surfaced as a portfolio company of battery-ventures and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+AppNeta is a network performance monitoring (NPM) platform for the distributed, cloud-connected enterprise, now delivered as a Broadcom product under its IT Operations Management / Network Management portfolio. AppNeta Performance Manager continuously measures network paths, delivery quality, usage, and end-user application experience across SaaS, cloud, and internet paths using a combination of active (synthetic) and passive monitoring from distributed monitoring points. It exposes a RESTful API (v3 for AppNeta Classic and v4 for AppNeta with Intelligent Alarms) for programmatic access to monitoring policies, web paths, web applications, alarm connectors, and event/observer integrations, authenticated with API access tokens. As of February 2026 the API interface and documentation were upgraded from Swagger to OpenAPI 3.0. AppNeta was originally an independent, Battery Ventures-backed company before joining Broadcom.
 
-Backed by: battery-ventures
+**Areas:** Company · Network Monitoring · Network Performance Monitoring · Observability · Application Performance Monitoring · Synthetic Monitoring · Monitoring · Broadcom
+
+## AppNeta on APIs.io
+
+Everything profiled for AppNeta is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/appneta/](https://apis.io/providers/appneta/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [AppNeta Performance Manager API](https://apis.io/apis/appneta/appneta-performance-manager-api/) — RESTful API for AppNeta Performance Manager, covering monitoring policies and policy groups, web paths, web applications (locations, targets, user flows),…
+- [AppNeta REST API](https://apis.io/apis/appneta/appneta-rest-api/) — Token-authenticated REST API for the AppNeta SaaS platform. v4 (Intelligent Alarms) and v3 (Classic) expose monitoring data, monitoring policies, Monitoring…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Appneta Event Integration Webhooks](https://apis.io/asyncapis/appneta/appneta-event-integration-webhooks/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Appneta Authentication](https://apis.io/security/appneta/appneta-authentication/)
+- [Appneta Domain Security](https://apis.io/security/appneta/appneta-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Appneta Plans Pricing](https://apis.io/plans/appneta/appneta-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Appneta Rate Limits](https://apis.io/rate-limits/appneta/appneta-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.appneta.com/)
+- [Documentation](https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api.html)
+- [Getting started](https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/getting-started.html)
+- [API reference](https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v4.html)
+- [Support](https://support.broadcom.com/)
+- [Changelog](https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/appneta/GA/integrate/api/api-v3.html#title-appneta-api_api-changes)
+- [Blog](https://www.broadcom.com/company/news)
+- [Terms of service](https://www.broadcom.com/company/legal/terms-of-use)
+- [Privacy policy](https://www.broadcom.com/company/legal/privacy)
+- [GitHub](https://github.com/appneta)
+- [Status](https://status.broadcom.com/services/appneta)
+
+## API Evangelist rating
+
+**Kin Score 42.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 39.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 73.7 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 28.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/appneta/](https://apis.io/providers/appneta/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AppNeta: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/appneta/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
